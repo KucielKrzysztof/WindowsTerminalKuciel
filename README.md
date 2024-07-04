@@ -4,8 +4,9 @@
 C:\Users\XYZ\.config\starship.toml
 
 ### Starship install:
-
+```cmd
 winget install --id Starship.Starship
+```
 
 clink:
 https://github.com/chrisant996/clink/releases
