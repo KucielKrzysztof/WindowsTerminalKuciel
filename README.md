@@ -11,16 +11,16 @@ clink:
 https://github.com/chrisant996/clink/releases
 
 Config clink:
-1. Otwórz cmd.
-2. Utwórz nowy plik konfiguracyjny 'starship.lua' w katalogu '%LocalAppData%\clink\':
+1. Open cmd.
+2. Create a new configuration file 'starship.lua' in the directory '%LocalAppData%\clink\':
 ```cmd
 notepad %LocalAppData%\clink\starship.lua
 ```
-3. Skopiuj i wklej poniższą zawartość do otwartego pliku starship.lua:
+3. Copy and paste this code into 'starship.lua':
 ```lua
 load(io.popen('starship init cmd'):read("*a"))()
 ```
-4. Zapisz i zamknij plik starship.lua.
+4. Save and quit 'starship.lua'.
 
 ### docs:
 https://starship.rs/installing/
