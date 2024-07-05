@@ -1,7 +1,9 @@
 # Windows Terminal Starship configuration
 
 ### Starship config directory:
+```cmd
 C:\Users\XYZ\.config\starship.toml
+```
 
 ### Starship install:
 ```cmd
