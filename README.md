@@ -32,5 +32,5 @@ https://starship.rs/installing/
 ### 6. how it looks:
 ![screen1](screen.png)
 
-## Linux
+## Linux [WSL](Ubuntu)
 # to do LINUX VERSION (i mean it's done but need to guide it for future self to restore quick)
