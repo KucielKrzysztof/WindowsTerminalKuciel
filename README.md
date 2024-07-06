@@ -15,6 +15,7 @@ https://github.com/chrisant996/clink/releases
 
 ### 4. Config clink:
 4.1 Open cmd.
+
 4.22 Create a new configuration file 'starship.lua' in the directory '%LocalAppData%\clink\':
 ```cmd
 notepad %LocalAppData%\clink\starship.lua
