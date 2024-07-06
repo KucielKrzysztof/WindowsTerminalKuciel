@@ -10,7 +10,7 @@ C:\Users\<User_Name>\.config\starship.toml
 winget install --id Starship.Starship
 ```
 
-### 3. clink:
+### 3. Download and install clink:
 https://github.com/chrisant996/clink/releases
 
 ### 4. Config clink:
