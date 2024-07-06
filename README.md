@@ -1,4 +1,4 @@
-# Windows Terminal Starship configuration
+# Windows Terminal and WSL2 Ubuntu Starship configuration
 ## Windows
 ### 1. Starship config path:
 ```cmd
