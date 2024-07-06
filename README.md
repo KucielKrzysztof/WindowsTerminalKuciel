@@ -2,7 +2,7 @@
 
 ### Starship config directory:
 ```cmd
-C:\Users\XYZ\.config\starship.toml
+C:\Users\<User_Name>\.config\starship.toml
 ```
 
 ### Starship install:
@@ -30,3 +30,6 @@ https://starship.rs/installing/
 
 ### how it looks:
 ![screen1](screen.png)
+
+
+# to do LINUX VERSION (i mean it's done but need to guide it for future self to restore quick)
