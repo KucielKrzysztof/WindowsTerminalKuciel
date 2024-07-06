@@ -1,35 +1,35 @@
 # Windows Terminal Starship configuration
-
-### Starship config directory:
+## Windows
+### 1. Starship config directory:
 ```cmd
 C:\Users\<User_Name>\.config\starship.toml
 ```
 
-### Starship install:
+### 2. Starship install:
 ```cmd
 winget install --id Starship.Starship
 ```
 
-clink:
+3. clink:
 https://github.com/chrisant996/clink/releases
 
-Config clink:
-1. Open cmd.
-2. Create a new configuration file 'starship.lua' in the directory '%LocalAppData%\clink\':
+4. Config clink:
+4.1 Open cmd.
+4.22 Create a new configuration file 'starship.lua' in the directory '%LocalAppData%\clink\':
 ```cmd
 notepad %LocalAppData%\clink\starship.lua
 ```
-3. Copy and paste this code into 'starship.lua':
+4.3 Copy and paste this code into 'starship.lua':
 ```lua
 load(io.popen('starship init cmd'):read("*a"))()
 ```
-4. Save and quit 'starship.lua'.
+4.4 Save and quit 'starship.lua'.
 
-### docs:
+### 5. docs:
 https://starship.rs/installing/
 
-### how it looks:
+### 6. how it looks:
 ![screen1](screen.png)
 
-
+## Linux
 # to do LINUX VERSION (i mean it's done but need to guide it for future self to restore quick)
