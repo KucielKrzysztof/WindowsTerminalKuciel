@@ -1,0 +1,99 @@
+# Starship Configuration Example
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+
+format = """
+[](#FF92DF)\
+[$os](white)\
+
+[$username](bg:#FF92DF fg:white)\
+[](bg:#FF6E6E fg:#FF92DF)\
+$shell\
+[  bash](bg:#FF6E6E fg:white)\
+[](bg:#FCA17D fg:#FF6E6E)\
+[ in ](bg:#FCA17D fg:white)\
+[](bg:#BD93F9 fg:#FCA17D)\ 
+ [$directory](bg:#FCA17D fg:white)\
+ [](fg:#BD93F9)\ 
+\n$time[$character](fg:#FFFFA5) """
+
+
+#red #FF6E6E
+
+# Ustawienia nazwy użytkownika
+[username]
+style_user = "yellow"
+format = ' \[wsl\]$user '
+show_always = true
+disabled = false
+
+# Ustawienia nazwy hosta
+[hostname]
+#ssh_only = false
+#format = " on <[$hostname]($style)>"
+#style = "bold white"
+#disabled = false
+
+[os]
+disabled = false
+style = "bg:#FF92DF fg:white"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = ""
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:color_bg1"
+format = '[[ $time ](fg:color_fg0 bg:color_bg1)]($style)'
+
+# Ustawienia katalogu
+[directory]
+disabled = false
+truncation_length = 0
+#style = "#BD93F9"  # Kolor fioletowy
+style = "fg:white bg:#BD93F9"
+home_symbol = '󰋜 ~'
+
+read_only = "🔒 "
+format = "[ $path ]($style)[$read_only](fg:white bg:#BD93F9)"
+
+# Konfiguracja modułu 'character'
+[character]
+format = '[❯](bold yellow)'
+#format = "$symbol "
+#symbol = '[➜](#FFFFA5)'
+
+
+# Wyłączenie modułu 'package', ukrycie go całkowicie z prompta
+[package]
+disabled = true
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
+
+
