@@ -1,4 +1,4 @@
-# Windows Terminal and WSL2 Ubuntu Starship configuration
+# Windows Terminal and WSL2 Ubuntu and Kali Starship configuration
 ## Windows
 ### 1. Starship config path:
 ```cmd
@@ -34,3 +34,7 @@ https://starship.rs/installing/
 
 ## Linux \[WSL\](Ubuntu)
 # to do LINUX VERSION (i mean it's done but need to guide it for future self to restore quick)
+
+## Linux \[WSL\](Kali)
+# to do LINUX VERSION (i mean it's done but need to guide it for future self to restore quick)
+
