@@ -1,5 +1,5 @@
 # Starship Configuration Example
-
+#this is my ubuntu toml
 "$schema" = 'https://starship.rs/config-schema.json'
 
 
