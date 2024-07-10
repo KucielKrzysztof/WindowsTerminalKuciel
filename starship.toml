@@ -1,18 +1,30 @@
 # Starship Configuration Example
+#Windows CMD starship file
 
 "$schema" = 'https://starship.rs/config-schema.json'
 
 
 format = """
-[](#FF92DF)\
-[$os](white)\
-[$username](bg:#FF92DF fg:white)\
-[](bg:#FCA17D fg:#FF92DF)\
-[ in ](bg:#FCA17D fg:white)\
-[](bg:#BD93F9 fg:#FCA17D)\ 
- [$directory](bg:#FCA17D fg:white)\
- [](fg:#BD93F9)\ 
-\n$time[$character](fg:#FFFFA5)"""
+[┌─](white)\
+[](#F8F6E3)\
+[$os]()\
+[$username](bg:#F8F6E3 fg:#7AA2E3)\
+[](bg:#86BBD8 fg:#F8F6E3)\
+[  ](bg:#86BBD8 fg:white)\
+$git_branch\
+$git_status\
+[](fg:#86BBD8 bg:#6AD4DD)\
+[ in ](bg:#6AD4DD fg:white)\
+[](bg:#ADF7B6 fg:#6AD4DD)\ 
+ [ $directory](fg:black bg:#ADF7B6)\
+ [](fg:#ADF7B6)\ 
+\n\
+[└─](white)\
+[](#ADF7B6)\
+[$time  cmd :>](fg:black bg:#ADF7B6)\
+[](fg:#ADF7B6)\
+[ ]()\
+ """
 
 # Ustawienia nazwy użytkownika
 [username]
@@ -30,7 +42,7 @@ disabled = false
 
 [os]
 disabled = false
-style = "bg:#FF92DF fg:white"
+style = "bg:#F8F6E3 fg:#7AA2E3"
 
 [os.symbols]
 Windows = "󰍲"
@@ -64,29 +76,38 @@ format = '[[ $time ](fg:color_fg0 bg:color_bg1)]($style)'
 disabled = false
 truncation_length = 0
 #style = "#BD93F9"  # Kolor fioletowy
-style = "fg:white bg:#BD93F9"
-home_symbol = '󰋜 ~'
+style = "fg:black bg:#ADF7B6"
+#home_symbol = '󰋜 ~'
 
 read_only = "🔒"
 read_only_style = "red"
 format = "[ $path ]($style)[$read_only]($read_only_style)"
 
 # Konfiguracja modułu 'character'
-[character]
-format = "$symbol "
-symbol = '[➜](#FFFFA5)'
+#[character]
+#format = '[❯](bold yellow)'
+#format = "$symbol "
+#symbol = '[➜](#FFFFA5)'
 
 
 # Wyłączenie modułu 'package', ukrycie go całkowicie z prompta
 [package]
 disabled = true
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
+#[directory.substitutions]
+#"Documents" = "󰈙 "
+#"Downloads" = " "
+#"Music" = "󰝚 "
+#"Pictures" = " "
+#"Developer" = "󰲋 "
 
 
+#git 
+[git_branch]
+symbol = ""
+style = "bg:#86BBD8 fg:white"
+format = '[ $symbol $branch ]($style)'
 
+[git_status]
+style = "bg:#86BBD8 fg:white"
+format = '[$all_status$ahead_behind ]($style)'
