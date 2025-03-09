@@ -1,0 +1,113 @@
+# Starship Configuration Example
+#Windows CMD starship file
+
+"$schema" = 'https://starship.rs/config-schema.json'
+
+
+format = """
+[┌─](white)\
+[](#F8F6E3)\
+[$os]()\
+[$username](bg:#F8F6E3 fg:#7AA2E3)\
+[](bg:#86BBD8 fg:#F8F6E3)\
+[  ](bg:#86BBD8 fg:white)\
+$git_branch\
+$git_status\
+[](fg:#86BBD8 bg:#6AD4DD)\
+[ in ](bg:#6AD4DD fg:white)\
+[](bg:#ADF7B6 fg:#6AD4DD)\ 
+ [ $directory](fg:black bg:#ADF7B6)\
+ [](fg:#ADF7B6)\ 
+\n\
+[└─](white)\
+[](#ADF7B6)\
+[$time  cmd :>](fg:black bg:#ADF7B6)\
+[](fg:#ADF7B6)\
+[ ]()\
+ """
+
+# Ustawienia nazwy użytkownika
+[username]
+style_user = "yellow"
+format = " $user "
+show_always = true
+disabled = false
+
+# Ustawienia nazwy hosta
+[hostname]
+#ssh_only = false
+#format = " on <[$hostname]($style)>"
+#style = "bold white"
+#disabled = false
+
+[os]
+disabled = false
+style = "bg:#F8F6E3 fg:#7AA2E3"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:color_bg1"
+format = '[[ $time ](fg:color_fg0 bg:color_bg1)]($style)'
+
+# Ustawienia katalogu
+[directory]
+disabled = false
+truncation_length = 0
+#style = "#BD93F9"  # Kolor fioletowy
+style = "fg:black bg:#ADF7B6"
+#home_symbol = '󰋜 ~'
+
+read_only = "🔒"
+read_only_style = "red"
+format = "[ $path ]($style)[$read_only]($read_only_style)"
+
+# Konfiguracja modułu 'character'
+#[character]
+#format = '[❯](bold yellow)'
+#format = "$symbol "
+#symbol = '[➜](#FFFFA5)'
+
+
+# Wyłączenie modułu 'package', ukrycie go całkowicie z prompta
+[package]
+disabled = true
+
+#[directory.substitutions]
+#"Documents" = "󰈙 "
+#"Downloads" = " "
+#"Music" = "󰝚 "
+#"Pictures" = " "
+#"Developer" = "󰲋 "
+
+
+#git 
+[git_branch]
+symbol = ""
+style = "bg:#86BBD8 fg:white"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#86BBD8 fg:white"
+format = '[$all_status$ahead_behind ]($style)'
