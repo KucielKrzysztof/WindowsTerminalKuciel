@@ -1,35 +1,41 @@
 # Starship Configuration Example
-#Windows CMD starship file
 
 "$schema" = 'https://starship.rs/config-schema.json'
 
 
 format = """
-[┌─](white)\
-[](#F8F6E3)\
-[$os]()\
-[$username](bg:#F8F6E3 fg:#7AA2E3)\
-[](bg:#86BBD8 fg:#F8F6E3)\
-[  ](bg:#86BBD8 fg:white)\
-$git_branch\
-$git_status\
-[](fg:#86BBD8 bg:#6AD4DD)\
-[ in ](bg:#6AD4DD fg:white)\
-[](bg:#ADF7B6 fg:#6AD4DD)\ 
- [ $directory](fg:black bg:#ADF7B6)\
- [](fg:#ADF7B6)\ 
-\n\
-[└─](white)\
-[](#ADF7B6)\
-[$time  cmd :>](fg:black bg:#ADF7B6)\
-[](fg:#ADF7B6)\
-[ ]()\
+[┌──]()\
+[](fg:#a3aed2)\
+[$os](xxx)\
+
+[$username](bg:#a3aed2 fg:#090c0c)\
+[](bg:#1d2230  fg:#a3aed2)\
+
+[  ](bg:#1d2230 fg:white )\
+[$git_branch](bg:#1d2230 fg:white )\
+[$git_status](bg:#1d2230 fg:white )\
+[](fg:#212736 bg:#769ff0)\
+
+[  zsh](fg:#e3e5e5 bg:#769ff0)\
+[](bg:#394260 fg:#769ff0)\
+[ in ](bg:#394260 fg:#769ff0)\
+[](fg:#394260 bg:#212736)\
+ [$directory]()\
+ [](fg:#212736 )\
+\n[└──]()\
+[](#394260)\ 
+[$time](bg:#394260 fg:#769ff0)\
+[$character](bg:#394260 )\
+[ ](#394260 )\
  """
+
+
+#red #FF6E6E
 
 # Ustawienia nazwy użytkownika
 [username]
 style_user = "yellow"
-format = " $user "
+format = ' \[wsl\]$user '
 show_always = true
 disabled = false
 
@@ -42,11 +48,11 @@ disabled = false
 
 [os]
 disabled = false
-style = "bg:#F8F6E3 fg:#7AA2E3"
+style = "bg:#a3aed2 fg:#090c0c"
 
 [os.symbols]
 Windows = "󰍲"
-Ubuntu = "󰕈"
+Ubuntu = ""
 SUSE = ""
 Raspbian = "󰐿"
 Mint = "󰣭"
@@ -64,6 +70,7 @@ CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
+Kali = " "
 
 [time]
 disabled = false
@@ -75,39 +82,37 @@ format = '[[ $time ](fg:color_fg0 bg:color_bg1)]($style)'
 [directory]
 disabled = false
 truncation_length = 0
-#style = "#BD93F9"  # Kolor fioletowy
-style = "fg:black bg:#ADF7B6"
-#home_symbol = '󰋜 ~'
+style = "fg:#769ff0 bg:#212736"
+home_symbol = '󰋜 ~'
 
-read_only = "🔒"
-read_only_style = "red"
-format = "[ $path ]($style)[$read_only]($read_only_style)"
+read_only = "🔒 "
+format = "[ $path ]($style)[$read_only](fg:white bg:#BD93F9)"
 
 # Konfiguracja modułu 'character'
-#[character]
-#format = '[❯](bold yellow)'
-#format = "$symbol "
-#symbol = '[➜](#FFFFA5)'
+[character]
+format = '\$'
+
 
 
 # Wyłączenie modułu 'package', ukrycie go całkowicie z prompta
 [package]
 disabled = true
 
-#[directory.substitutions]
-#"Documents" = "󰈙 "
-#"Downloads" = " "
-#"Music" = "󰝚 "
-#"Pictures" = " "
-#"Developer" = "󰲋 "
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Developer" = "󰲋 "
+
 
 
 #git 
 [git_branch]
-symbol = ""
-style = "bg:#86BBD8 fg:white"
+symbol = "on "
+style = "bg:#1d2230 fg:white"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#86BBD8 fg:white"
+style = "bg:#1d2230 fg:white"
 format = '[$all_status$ahead_behind ]($style)'
