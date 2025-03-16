@@ -69,7 +69,7 @@ eval "$(starship init bash)"
 ### 5. Starship config path:
 
 ```bash
-home/chris/.config/starship.toml
+home/<user>/.config/starship.toml
 ```
 
 ### 6. how it looks:
