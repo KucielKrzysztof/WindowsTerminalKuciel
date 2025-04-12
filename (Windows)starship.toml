@@ -1,4 +1,4 @@
-# Starship Configuration Example
+
 #Windows CMD starship file
 
 "$schema" = 'https://starship.rs/config-schema.json'
@@ -10,19 +10,23 @@ format = """
 [$os]()\
 [$username](bg:#F8F6E3 fg:#7AA2E3)\
 [](bg:#86BBD8 fg:#F8F6E3)\
+
 [  ](bg:#86BBD8 fg:white)\
 $git_branch\
 $git_status\
 [](fg:#86BBD8 bg:#6AD4DD)\
+
 [ in ](bg:#6AD4DD fg:white)\
-[](bg:#ADF7B6 fg:#6AD4DD)\ 
- [ $directory](fg:black bg:#ADF7B6)\
- [](fg:#ADF7B6)\ 
+[](bg:#394260  fg:#6AD4DD)\ 
+
+ [ $directory](fg:#769ff0 bg:#394260 )\
+ [](fg:#394260 )\ 
 \n\
+
 [└─](white)\
-[](#ADF7B6)\
-[$time  cmd :>](fg:black bg:#ADF7B6)\
-[](fg:#ADF7B6)\
+[](#394260 )\
+[$time  cmd :>](fg:#769ff0 bg:#394260 )\
+[](fg:#394260 )\
 [ ]()\
  """
 
@@ -75,8 +79,7 @@ format = '[[ $time ](fg:color_fg0 bg:color_bg1)]($style)'
 [directory]
 disabled = false
 truncation_length = 0
-#style = "#BD93F9"  # Kolor fioletowy
-style = "fg:black bg:#ADF7B6"
+style = "fg:#769ff0 bg:#394260 "
 #home_symbol = '󰋜 ~'
 
 read_only = "🔒"
