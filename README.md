@@ -42,7 +42,7 @@ https://starship.rs/installing/
 
 ### 6. how it looks:
 
-![screen1](Windows-starship.png)
+![screen1](Windows-starship1.png)
 
 ## Linux \[WSL\](Ubuntu)
 
