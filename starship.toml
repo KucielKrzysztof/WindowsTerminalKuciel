@@ -6,7 +6,7 @@
 format = """
 [┌──]()\
 [](fg:#a3aed2)\
-[$os](xxx)\
+[$os]()\
 
 [$username](bg:#a3aed2 fg:#090c0c)\
 [](bg:#1d2230  fg:#a3aed2)\
@@ -48,7 +48,7 @@ disabled = false
 
 [os]
 disabled = false
-style = "bg:#a3aed2 fg:#090c0c"
+style = "bg:#a3aed2 fg:#090c0c bold"
 
 [os.symbols]
 Windows = "󰍲"
@@ -86,7 +86,7 @@ style = "fg:#769ff0 bg:#212736"
 home_symbol = '󰋜 ~'
 
 read_only = "🔒 "
-format = "[ $path ]($style)[$read_only](fg:white bg:#BD93F9)"
+format = "[ $path ]($style)[$read_only](fg:white bg:#212736)"
 
 # Konfiguracja modułu 'character'
 [character]
@@ -110,7 +110,7 @@ disabled = true
 #git 
 [git_branch]
 symbol = "on "
-style = "bg:#1d2230 fg:white"
+style = "bg:#1d2230 fg:white bold"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
